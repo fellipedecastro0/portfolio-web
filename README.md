@@ -2,6 +2,8 @@
 
 Portfólio acadêmico da equipe **Jhonathan Magalhães da Cruz** e **Fellipe de Castro**, alunos do **3º semestre de Engenharia de Software** no **CEUB**. O site reúne as quatro entregas da disciplina **Desenvolvimento Web**, com links diretos aos repositórios no GitHub e uma seção dedicada à correção pela professora.
 
+**🌐 Portfólio online:** [courageous-palmier-ff0569.netlify.app](https://courageous-palmier-ff0569.netlify.app/)
+
 **Professora:** Kadidja Valeria Reginaldo de Oliveira  
 **Disciplina:** Desenvolvimento Web · CEUB · 2026.1
 
@@ -22,7 +24,7 @@ O site é **bilíngue (PT/EN)**, suporta **tema claro/escuro** e inclui um paine
 - **Três layouts de exibição:** grade, lista e mosaico
 - **Modal de detalhes** por projeto (descrição, stack, link para repositório)
 - **Seção da equipe** com fotos e perfis no GitHub
-- **Seção “Correção”** — manifesto de entrega com links diretos para todos os repositórios
+- **Seção "Correção"** — manifesto de entrega com links diretos para todos os repositórios
 - **Internacionalização** PT / EN
 - **Tema dark / light**
 - **Painel Tweaks** — accent color, fontes mono/display, densidade, scanlines
