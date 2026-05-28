@@ -52,7 +52,44 @@ O site é **bilíngue (PT/EN)**, suporta **tema claro/escuro** e inclui um paine
 | **Fellipe de Castro** ([@fellipedecastro0](https://github.com/fellipedecastro0)) | Engenharia de Software · 3º semestre |
 
 ---
+## Framework: React
 
+A interface deste portfólio foi construída com **React 18**, a biblioteca JavaScript mantida pela Meta para criação de interfaces de usuário. A escolha do React permitiu organizar a página como um conjunto de **componentes reutilizáveis e declarativos**, em que cada parte da tela (barra de navegação, hero, galeria de projetos, modal, painel de tweaks) é uma função independente que descreve *o que* deve aparecer, deixando o React cuidar de *como* atualizar o DOM.
+
+### Por que React?
+
+- **Componentização** — a UI é dividida em peças pequenas e independentes (`TopBar`, `Hero`, `ProjectsSection`, `ProjectCard`, `ProjectModal`, `TeamSection`, `ReviewSection`, `TweaksPanel`), o que facilita manutenção e leitura.
+- **Renderização declarativa** — descrevemos o estado desejado da interface e o React reconcilia o DOM automaticamente, evitando manipulação manual e propensa a erros.
+- **Estado reativo com Hooks** — mudanças de idioma, tema, layout e personalização refletem na tela instantaneamente, sem recarregar a página.
+- **Ecossistema e familiaridade** — React é um dos padrões mais adotados do mercado, o que agrega valor acadêmico e profissional ao projeto.
+
+### Como o React é usado no projeto
+
+| Recurso | Aplicação |
+|---------|-----------|
+| **React 18 (CDN)** | Carregado direto via `unpkg`, sem necessidade de instalação ou bundler |
+| **JSX** | Sintaxe declarativa para descrever a UI, transpilada no navegador pelo **Babel Standalone** |
+| **`ReactDOM.createRoot`** | API de renderização concorrente do React 18, montando o app no `<div id="app">` |
+| **`useState`** | Gerenciamento de estado local (projeto aberto no modal, busca, controles de UI) |
+| **`useEffect`** | Efeitos colaterais — aplicação de tokens de tema, *reveal-on-scroll* via `IntersectionObserver`, suporte a `Escape` no modal |
+| **`useMemo`** | Filtragem e memorização da lista de projetos na busca, evitando recálculos desnecessários |
+| **`useRef`** | Referências diretas a elementos para arrastar o painel e controlar sliders |
+| **Hook customizado `useTweaks`** | Hook próprio que centraliza as preferências do usuário (cor, fonte, layout, densidade, tema, idioma) e as persiste no `localStorage` |
+| **Props & composição** | Dados e callbacks fluem de cima para baixo (`str`, `lang`, `onOpen`, `onNav`…), e o `TweaksPanel` usa `children` para compor seus controles |
+
+### Arquitetura de componentes
+App (app.jsx)
+├── TopBar → navegação, troca de idioma e tema
+├── Hero → terminal simulado + estatísticas
+├── ProjectsSection → busca + galeria (grade / lista / mosaico)
+│ └── ProjectCard
+├── TeamSection → integrantes da equipe
+├── ReviewSection → manifesto de entrega e links
+├── Footer
+├── ProjectModal → detalhes do projeto (renderização condicional)
+└── TweaksPanel → painel de personalização visual
+
+> **Sem build:** diferente da maioria dos projetos React, este roda **sem bundler e sem `package.json`**. O React e o Babel são carregados via CDN e o JSX é transpilado em tempo de execução no navegador — basta servir os arquivos estaticamente. Essa abordagem mantém o projeto leve, portátil e fácil de hospedar (no caso, na Netlify).
 ## Stack tecnológica
 
 | Camada | Tecnologias |
