@@ -8,6 +8,45 @@ Portfólio acadêmico da equipe **Jhonathan Magalhães da Cruz** e **Fellipe de 
 **Disciplina:** Desenvolvimento Web · CEUB · 2026.1
 
 ---
+## Instalação e preparação do ambiente
+
+Este portfólio é um projeto **estático** que usa **React 18 via CDN** com transpilação de JSX no navegador (Babel Standalone). Por isso **não há instalação de dependências, `package.json` nem etapa de build** — você só precisa de um servidor estático para visualizá-lo localmente.
+
+> ⚠️ **Importante:** não abra o `index.html` com duplo-clique (`file://`). Os arquivos `.jsx` são carregados via `fetch` pelo Babel, e o protocolo `file://` bloqueia essa requisição (CORS). Sempre rode através de um servidor HTTP local, como mostrado abaixo.
+
+### Pré-requisitos
+
+| Requisito | Necessário? | Observação |
+|-----------|-------------|------------|
+| **Navegador moderno** | Obrigatório | Chrome, Edge, Firefox ou Safari atualizados |
+| **Git** | Recomendado | Para clonar o repositório |
+| **Conexão com a internet** | Obrigatório (1ª execução) | React, Babel e as fontes são carregados via CDN |
+| **Node.js** ou **Python** | Opcional | Apenas para subir um servidor local |
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/fellipedecastro0/portfolio-web.git
+cd portfolio-web
+2. Rodar um servidor local
+Escolha uma das opções abaixo:
+
+Opção A — Python (já vem instalado em Linux/macOS):
+
+python3 -m http.server 5500
+# acesse http://localhost:5500
+Opção B — Node.js (npx, sem instalar nada global):
+
+npx serve .
+# ou
+npx http-server -p 5500
+Opção C — VS Code + extensão Live Server:
+
+Instale a extensão Live Server (Ritwick Dey)
+Clique com o botão direito em index.html → "Open with Live Server"
+3. Abrir no navegador
+Acesse o endereço indicado pelo servidor (ex.: http://localhost:5500). O site carrega o React e o Babel automaticamente via CDN e renderiza a aplicação no <div id="app">.
+```
 
 ## Sobre o projeto
 
