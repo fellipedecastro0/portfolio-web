@@ -77,17 +77,7 @@ A interface deste portfólio foi construída com **React 18**, a biblioteca Java
 | **Hook customizado `useTweaks`** | Hook próprio que centraliza as preferências do usuário (cor, fonte, layout, densidade, tema, idioma) e as persiste no `localStorage` |
 | **Props & composição** | Dados e callbacks fluem de cima para baixo (`str`, `lang`, `onOpen`, `onNav`…), e o `TweaksPanel` usa `children` para compor seus controles |
 
-### Arquitetura de componentes
-App (app.jsx)
-├── TopBar → navegação, troca de idioma e tema
-├── Hero → terminal simulado + estatísticas
-├── ProjectsSection → busca + galeria (grade / lista / mosaico)
-│ └── ProjectCard
-├── TeamSection → integrantes da equipe
-├── ReviewSection → manifesto de entrega e links
-├── Footer
-├── ProjectModal → detalhes do projeto (renderização condicional)
-└── TweaksPanel → painel de personalização visual
+
 
 > **Sem build:** diferente da maioria dos projetos React, este roda **sem bundler e sem `package.json`**. O React e o Babel são carregados via CDN e o JSX é transpilado em tempo de execução no navegador — basta servir os arquivos estaticamente. Essa abordagem mantém o projeto leve, portátil e fácil de hospedar (no caso, na Netlify).
 ## Stack tecnológica
