@@ -164,3 +164,18 @@ A equipe declara que:
 ---
 
 ## Estrutura do repositório
+
+## 📱 Testes de Responsividade
+
+### Mobile (até 480px)
+<img width="1039" height="903" alt="image" src="https://github.com/user-attachments/assets/31b24b7c-6731-4c60-801f-dd317b212504" />
+
+
+### Tablet (481px – 1024px)
+<img width="1173" height="846" alt="image" src="https://github.com/user-attachments/assets/48d1c13f-86c3-46b1-8f18-d691f79fb41c" />
+
+
+### Desktop (1025px+)
+<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/80c21e34-f015-46b7-b6e5-70341cf9cfb7" />
+
+
